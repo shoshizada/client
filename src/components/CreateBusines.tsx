@@ -16,11 +16,7 @@ const CreateBusines=()=>
         phone: string
         }
 
-    const[topic,setTopic]=useState("")
-    const [objName,setObjName]=useState("")
-    const [uid,setUid]=useState("")
-    const [description,setDescription]=useState("")
-    const [phone,setPhone]=useState("")
+  
     const [newBusiness,setNewBusiness]=useState({
         topic: "",
         objName: "",
@@ -55,16 +51,16 @@ const CreateBusines=()=>
         return(
             <div>
                 <Stack spacing={3}>
-                    <Input onChange={handleChange} value={business.topic} name="topic" placeholder='topic' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setTopic(e.target.value)}></Input>
-                    <Input onChange={handleChange} value={business.objName } name="objName" placeholder='object name' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setObjName(e.target.value)}></Input> 
-                    <Input  onChange={handleChange}value={business.uid} name="uid" placeholder='manager uid' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUid(e.target.value)}></Input> 
-                    <Input  onChange={handleChange}value={business.description} name="description" placeholder='description' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setDescription(e.target.value)}></Input> 
+                    <Input onChange={handleChange} value={business.topic} name="topic" placeholder='topic' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input>
+                    <Input onChange={handleChange} value={business.objName } name="objName" placeholder='object name' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input> 
+                    <Input  onChange={handleChange}value={business.uid} name="uid" placeholder='manager uid' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input> 
+                    <Input  onChange={handleChange}value={business.description} name="description" placeholder='description' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input> 
                     <InputGroup>
                         <InputLeftElement
                         pointerEvents='none'
                         children={<PhoneIcon color='gray.300' />}
                         />
-                        <Input onChange={handleChange}value={business.phone}  name="phone" type='tel' placeholder='Phone number' onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPhone(e.target.value)}></Input> 
+                        <Input onChange={handleChange}value={business.phone}  name="phone" type='tel' placeholder='Phone number'  ></Input> 
                     </InputGroup>
                     <Button colorScheme='red' onClick={handleSubmit}>SUBMIT</Button>
                 </Stack>
