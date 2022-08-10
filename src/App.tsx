@@ -10,7 +10,7 @@ import CreateBusines from './components/CreateBusines';
 function App() {
   return (
     <div className="App">
-      <h1>people invited to my party</h1>
+
       {/* <Login/>  */}
       <List />
       <CreateBusines/>

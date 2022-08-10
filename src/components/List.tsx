@@ -15,7 +15,7 @@ const  List=() =>{
     }, [])
 
     const getAllUsers = async () => {
-        const res = await axios.get<User[]>(`http://localhost:3333/user/getAll`);
+        const res = await axios.get<User[]>(`http://localhost:3333/user`);
         console.log(res);
         setUsers(res.data);
     }
