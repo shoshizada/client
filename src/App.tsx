@@ -6,6 +6,7 @@ import List from './components/List';
 import { ChakraProvider } from '@chakra-ui/react'
 import Login from './components/Login';
 import CreateBusines from './components/CreateBusines';
+import GetSystem from './components/GetSystem';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       {/* <Login/>  */}
       <List />
       <CreateBusines/>
+      <GetSystem/>
     </div>
   );
 }
