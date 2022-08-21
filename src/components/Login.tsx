@@ -1,79 +1,74 @@
-// import React from 'react';
-// import { Button, Input, InputGroup, InputRightElement } from '@chakra-ui/react';
 
-// const Login=()=>
-// {
-  
-//       const [show, setShow] = React.useState(false)
-//      const handleClick = () => setShow(!show)
-
-//   return (
-//     <InputGroup size='md'>
-//       <Input
-//         pr='4.5rem'
-//         type={show ? 'text' : 'password'}
-//         placeholder='Enter password'
-//       />
-//       <InputRightElement width='4.5rem'>
-//         <Button h='1.75rem' size='sm' onClick={handleClick}>
-//           {show ? 'Hide' : 'Show'}
-//         </Button>
-//       </InputRightElement>
-//     </InputGroup>
-//   )
-// }
-// export default Login;
-import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState,useEffect } from 'react';
 import { auth, logInWithEmailAndPassword, signInWithGoogle } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { useNavigate } from 'react-router-dom'; 
 import "../css/Login.css";
-function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [user, loading, error] = useAuthState(auth);
-  const navigate = useNavigate();
-  useEffect(() => {
+
+ export default function LoginPage(){
+    const navigate = useNavigate();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [user, loading, error] = useAuthState(auth);
+   useEffect(() => {
+      console.log('useEffect');
     if (loading) {
-      // maybe trigger a loading screen
       return;
     }
-    if (user) navigate("/system");
-  }, [user, loading]);
-  return (
-    <div className="login">
-      <div className="login__container">
-        <input
-          type="text"
-          className="login__textBox"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="E-mail Address"
-        />
-        <input
-          type="password"
-          className="login__textBox"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
-        />
-        <button
-          className="login__btn"
-          onClick={() => logInWithEmailAndPassword(email, password)}
-        >
-          Login
-        </button>
-        <button className="login__btn login__google" onClick={signInWithGoogle}>
-          Login with Google
-        </button>
-        <div>
-          <Link to="/reset">Forgot Password</Link>
+    if (user)  {
+      console.log('if user');
+      console.log(user);
+      user.getIdToken().then((value=>{
+      const token=value;
+      console.log(token);
+    }));
+    
+      // navigate(`/system/${user.uid}`);  
+      navigate(`/system`);  
+    }
+   }, [user, loading]);
+  
+    return (
+        <div className='auth-inner' >
+        <h3>Sign In</h3>
+        <div className="mb-3">
+          <label>Email address</label>
+                <input
+                    type="email"
+                    className="form-control"
+                    placeholder="Enter email"
+                    onChange={(e) => setEmail(e.target.value)}
+          />
         </div>
-        <div>
-          Don't have an account? <Link to="/register">Register</Link> now.
+        <div className="mb-3">
+          <label>Password</label>
+          <input
+            type="password"
+            className="form-control"
+                    placeholder="Enter password"
+                    onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>           
+        <div className="d-grid">
+          <button type="button" className="btn btn-primary"
+            onClick={() => logInWithEmailAndPassword(email, password)}>
+            Submit
+          </button>
         </div>
+         <div className="mb-3">
+              <div className="d-grid">
+              <button type="button" className="login-with-google-btn"
+              onClick={signInWithGoogle} >
+                Sign in with Google
+             </button>
+          </div>
+          </div>
+        <p className="forgot-password text-right">
+          Forgot <a href="#">password?</a>
+        </p>
+        <p className="forgot-password text-right">
+          Already registered <a href="/signUp">Sign Up</a>
+        </p>
       </div>
-    </div>
-  );
-}
-export default Login;
+    );
+};

@@ -6,11 +6,9 @@ import List from './components/List';
 import { ChakraProvider } from '@chakra-ui/react'
 import Login from './components/Login';
 import CreateBusines from './components/CreateBusines';
+import SignUP from './components/SingUp';
 import GetSystem from './components/GetSystem';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Register from './components/Register';
-import Reset from './components/Reset';
-import Dashboard from './components/Dashboard';
 
 function App() {
   return (
@@ -18,9 +16,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/reset" element={<Reset />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/signUp" element={<SignUP />} />
         <Route path="/system" element={<GetSystem />} />
       </Routes>
     </Router>
