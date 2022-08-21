@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Input, InputGroup, InputRightElement } from '@chakra-ui/react';
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { getAllSystems } from '../../api/system';
 
     interface System{  
         topic: string
@@ -23,9 +24,9 @@ const GetSystem=()=>
     }, [])
 
     const getAllSystem = async () => {
-        const res = await axios.get<System[]>(`http://localhost:3333/system`);
+        const res =getAllSystems();
         console.log(res);
-        setSystem(res.data);
+        setSystem(await res);
     }
     const renderList = () : JSX.Element[]=>
     {
