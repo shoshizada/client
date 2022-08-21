@@ -55,8 +55,6 @@ const GetSystem=()=>
         return (
             <>
             <h1>All Businesses</h1>
-             <img src="https://www.geektime.co.il/waze-starts-shipping-beta-testers-dark-mode-for-the-entire-ui/" alt="water sport" />
-            <img src={"client\src\css\image (62).png"}/>
          <button onClick={handleClick} >get system by id</button>
            <div>{renderList()}</div>
        
