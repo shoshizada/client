@@ -12,7 +12,7 @@ export interface Business
         description: string
         phone: string
         email: string
-        uid:string
+        urlName:string
 }
 
 const CreateBusines=()=>
@@ -28,7 +28,7 @@ const CreateBusines=()=>
         description:"",
         phone:  "",
         email: "",
-        uid: " ", 
+        urlName: " ", 
         })
  
 
@@ -57,6 +57,8 @@ const CreateBusines=()=>
 
         return(
             <div>
+                <h1>Add Business</h1>
+                
                 <Stack spacing={3}>
                     <Input onChange={addBusiness} value={newBusiness.topic} name="topic" placeholder='topic' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input>
                     <Input onChange={addBusiness} value={newBusiness.objectName } name="objectName" placeholder='object name' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input> 
@@ -64,7 +66,7 @@ const CreateBusines=()=>
                     <Input  onChange={addBusiness}value={newBusiness.description} name="description" placeholder='description' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input> 
                     <Input  onChange={addBusiness}value={newBusiness.phone} name="phone" placeholder='phone' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input> 
                     <Input  onChange={addBusiness}value={newBusiness.email} name="email" placeholder='email' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input> 
-                    <Input  onChange={addBusiness}value={newBusiness.uid} name="uid" placeholder='manager uid' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input> 
+                    <Input  onChange={addBusiness}value={newBusiness.urlName} name="urlName" placeholder='manager urlName' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input> 
                     <InputGroup>
                         <InputLeftElement
                         pointerEvents='none'

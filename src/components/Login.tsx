@@ -38,7 +38,7 @@ function Login() {
       // maybe trigger a loading screen
       return;
     }
-    if (user) navigate("/system");
+    if (user) navigate("/getsystem");
   }, [user, loading]);
   return (
     <div className="login">

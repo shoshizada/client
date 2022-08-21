@@ -89,4 +89,21 @@
   color: white;
   border: none
 }
+p{
+  color: greenyellow;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: greenyellow;
+}
+h1{
+  color: orange;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+button{
+  color: white;
+ background-color: greenyellow;
+ width: 100px;
+ border: none;
+  
+}
+
 
