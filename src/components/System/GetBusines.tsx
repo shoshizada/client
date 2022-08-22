@@ -62,12 +62,16 @@ const GetSystem=()=>
       const handleClick = (event: React.MouseEvent<HTMLElement>) => {
        navigate('/getsystembyid')
       };
+      const map = (event: React.MouseEvent<HTMLElement>) => {
+       navigate('/map')
+      };
         return (
             <>
             <h1>All Businesses</h1>
          <button onClick={handleClick} >get system by id</button>
            <div>{renderList()}</div>
            <button onClick={logout}>Sign out of Firebase</button>
+            <button onClick={map}>tomap</button>
             </>
         )
     

@@ -7,19 +7,18 @@ import { ChakraProvider } from '@chakra-ui/react'
 import Login from './components/Login';
 import CreateBusines from './components/CreateBusines';
 import SignUP from './components/SingUp';
-import GetSystem from './components/GetSystem';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import UpdateBusines from './components/System/UpdateBusines';
 import GetBusines from './components/System/GetBusines';
 import DeleteBusines from './components/System/DeleteBusiness';
 import GetBusinessById from './components/System/GetBusinessById';
-
+import Map from './components/Map';
 
 function App() {
   return (
     <div className="app">
       <img src="client\src\css\image (62).png" />
-    <Router>
+     <Router>
       <Routes>
         <Route path="/" element={<Login />} />
 
@@ -30,6 +29,7 @@ function App() {
         <Route path="/updatesystem" element={<UpdateBusines />} />
          <Route path="/deletesystem" element={<DeleteBusines />} />
         <Route path="/getsystembyid" element={<GetBusinessById />} />
+        <Route path="/map" element={<Map/>} />
 
       </Routes>
       
