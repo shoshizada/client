@@ -2,9 +2,10 @@ import React, { useState,useEffect } from 'react';
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from 'react-router-dom';
 import { auth, registerWithEmailAndPassword,signInWithGoogle } from "../firebase";
-// import {Role} from '../models/user.model';
+ import {Role, User} from './user';
 // import { createUser} from '../api/user';
 import "../css/Register.css";
+import axios from 'axios';
  export default function SignUpPage() {
     const navigate = useNavigate();
     const [firstName, setFirstName] = useState('');
@@ -34,21 +35,32 @@ import "../css/Register.css";
   //     //׳™׳¦׳™׳¨׳” ׳¢׳ ׳׳•׳ ׳’׳•
   //     createInMongo();
   // }
+   const createUser= async (newUser:User) => {
+    debugger;
+    try {
+        const user= await axios.post('http://localhost:3333/user/', newUser);
+        console.log(user.data);
+         debugger;
+    }
+    catch (error) {
+        console.log('error-createUser',error);
+    }
+}
 
   const createInMongo=async()=>{
       const newUser = {
         uid: String(user?.uid),
-        role: "admin",
+        role: Role.admin,
         firstName: firstName,
         lastName: lastName,
         phone: phone,
         email: email
             }
-//             try{
-//       await createUser(newUser);
-//             }catch{
-// console.log("create failed");
-//             }
+            try{
+      await createUser(newUser);
+            }catch{
+console.log("create failed");
+            }
   }
       const signInGoogle = () => {
         signInWithGoogle();
