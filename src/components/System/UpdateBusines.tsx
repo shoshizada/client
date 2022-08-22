@@ -17,7 +17,7 @@ const UpdateBusines = () => {
         description: "",
         phone: "",
         email: "",
-        uid: " ",
+        urlName:"",
     })
 
 
@@ -40,7 +40,7 @@ const UpdateBusines = () => {
     return (
         <div>
 
-
+            <h1>Update Business</h1>
             <Stack spacing={3}>
                 <Input onChange={updateBusines} value={newBusiness.topic} name="topic" placeholder='topic' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input>
                 <Input onChange={updateBusines} value={newBusiness.objectName} name="objectName" placeholder='object name' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input>
@@ -48,7 +48,7 @@ const UpdateBusines = () => {
                 <Input onChange={updateBusines} value={newBusiness.description} name="description" placeholder='description' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input>
                 <Input onChange={updateBusines} value={newBusiness.phone} name="phone" placeholder='phone' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input>
                 <Input onChange={updateBusines} value={newBusiness.email} name="email" placeholder='email' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input>
-                <Input onChange={updateBusines} value={newBusiness.uid} name="uid" placeholder='manager uid' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input>
+                <Input onChange={updateBusines} value={newBusiness.urlName} name="urlName" placeholder='manager urlName' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input>
                 <InputGroup>
                     <InputLeftElement
                         pointerEvents='none'

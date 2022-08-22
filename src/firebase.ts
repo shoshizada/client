@@ -178,6 +178,7 @@ const registerWithEmailAndPassword = async (name:string,email:string, password:s
       authProvider: "local",
       email,
       
+      
     });
   } catch (err:any) {
     console.error(err);

@@ -1,10 +1,8 @@
-
 import React, { useState,useEffect } from 'react';
 import { auth, logInWithEmailAndPassword, signInWithGoogle } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { useNavigate } from 'react-router-dom'; 
-import "../css/Login.css";
-
+import { useNavigate } from 'react-router-dom';
+import '../css/Login.css'
  export default function LoginPage(){
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
@@ -23,8 +21,8 @@ import "../css/Login.css";
       console.log(token);
     }));
     
-      // navigate(`/system/${user.uid}`);  
-      navigate(`/system`);  
+      // navigate(`/HomePage/${user.uid}`);
+      navigate(`/system`);   
     }
    }, [user, loading]);
   
