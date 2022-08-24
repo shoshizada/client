@@ -40,31 +40,12 @@ const GetSystemById=()=>
      const handleClick1 = (event: React.MouseEvent<HTMLElement>) => {
        navigate('/deletesystem');
       };
-    //   const renderlist=():J=>{
-    //       if(system!=undefined){
-    //          <div><>
-    //             <p>id: {system._id} </p>
-    //             <p>topic: {system.topic}</p>
-    //             <p>objectName: {system.objectName} </p>
-    //             <p>owner: {system.owner}</p>
-    //             <p>description: {system.description} </p>
-    //             <p>phone: {system.phone} </p>
-    //             <p>email: {system.email}</p>
-    //             <p>urlName: {system.urlName} </p>
-    //             </></div> 
-    //       }
-    //       else{
-    //           <div></div>
-    //       }
-    //   }
-
-
+   
         return (
             <>
             <h1>GetBusinessById</h1>
              <Input onChange={(e) => setIdGetBusiness(e.target.value)} type='string' placeholder='ID OF BUSINESS TO GET'></Input>
              <button onClick={getSystem} >get</button>
-              {/* <div>{renderlist()}</div> */}
              {system!=undefined?  <div><>
                 <p>id: {system._id} </p>
                 <p>topic: {system.topic}</p>

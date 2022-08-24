@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import { useState } from 'react';
 import List from './components/List';
@@ -13,26 +13,40 @@ import GetBusines from './components/System/GetBusines';
 import DeleteBusines from './components/System/DeleteBusiness';
 import GetBusinessById from './components/System/GetBusinessById';
 import Map from './components/Map';
+<<<<<<< HEAD
 import AdminBar from './components/Admin/AdminBar'
 import EditBranches from './components/Admin/EditBranches';
+=======
+import System from './components/System';
+import Hello from './components/System/Hello';
+>>>>>>> c6947ba82cd36b13735e9d88e8023630484170e2
 
 function App() {
   return (
     <div className="app">
       <img src="client\src\css\image (62).png" />
+      {/* <Map></Map> */}
+      {/* <System></System> */}
      <Router>
       <Routes>
+<<<<<<< HEAD
         <Route path="/" element={<Login />} />
         <Route path="/admin" element={<AdminBar />} />
         <Route path="/edit" element={<EditBranches />} />
         <Route path="/signUp" element={<SignUP />} />
+=======
+         <Route path="/" element={<System />} />
+
+        {/* <Route path="/signUp" element={<SignUP />} />
+>>>>>>> c6947ba82cd36b13735e9d88e8023630484170e2
         <Route path="/system" element={<GetBusines />} />
         <Route path="/getsystem" element={<GetBusines />} />
         <Route path="/createsystem" element={<CreateBusines />} />
         <Route path="/updatesystem" element={<UpdateBusines />} />
          <Route path="/deletesystem" element={<DeleteBusines />} />
         <Route path="/getsystembyid" element={<GetBusinessById />} />
-        <Route path="/map" element={<Map/>} />
+        <Route path="/map" element={<Map/>} /> */} 
+                <Route path="/hello" element={<Hello/>} /> 
 
       </Routes>
       

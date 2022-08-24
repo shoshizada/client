@@ -7,8 +7,12 @@
     "@chakra-ui/react": "^2.2.6",
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
+<<<<<<< HEAD
     "@mui/icons-material": "^5.10.2",
     "@mui/material": "^5.10.2",
+=======
+    "@reach/combobox": "^0.17.0",
+>>>>>>> c6947ba82cd36b13735e9d88e8023630484170e2
     "@react-google-maps/api": "^2.12.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -16,7 +20,7 @@
     "@types/google-map-react": "^2.1.7",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.11.47",
-    "@types/react": "^18.0.15",
+    "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "axios": "^0.27.2",
     "firebase": "^9.9.3",
@@ -24,9 +28,11 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-firebase-hooks": "^5.0.3",
+    "react-icons": "^4.4.0",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "typescript": "^4.7.4",
+    "use-places-autocomplete": "^4.0.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
