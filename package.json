@@ -7,12 +7,9 @@
     "@chakra-ui/react": "^2.2.6",
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
-<<<<<<< HEAD
     "@mui/icons-material": "^5.10.2",
     "@mui/material": "^5.10.2",
-=======
     "@reach/combobox": "^0.17.0",
->>>>>>> c6947ba82cd36b13735e9d88e8023630484170e2
     "@react-google-maps/api": "^2.12.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
