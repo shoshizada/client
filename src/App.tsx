@@ -13,13 +13,10 @@ import GetBusines from './components/System/GetBusines';
 import DeleteBusines from './components/System/DeleteBusiness';
 import GetBusinessById from './components/System/GetBusinessById';
 import Map from './components/Map';
-<<<<<<< HEAD
 import AdminBar from './components/Admin/AdminBar'
 import EditBranches from './components/Admin/EditBranches';
-=======
 import System from './components/System';
 import Hello from './components/System/Hello';
->>>>>>> c6947ba82cd36b13735e9d88e8023630484170e2
 
 function App() {
   return (
@@ -29,12 +26,11 @@ function App() {
       {/* <System></System> */}
      <Router>
       <Routes>
-<<<<<<< HEAD
         <Route path="/" element={<Login />} />
         <Route path="/admin" element={<AdminBar />} />
         <Route path="/edit" element={<EditBranches />} />
         <Route path="/signUp" element={<SignUP />} />
-=======
+=
          <Route path="/" element={<System />} />
 
         {/* <Route path="/signUp" element={<SignUP />} />
