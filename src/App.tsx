@@ -13,6 +13,8 @@ import GetBusines from './components/System/GetBusines';
 import DeleteBusines from './components/System/DeleteBusiness';
 import GetBusinessById from './components/System/GetBusinessById';
 import Map from './components/Map';
+import AdminBar from './components/Admin/AdminBar'
+import EditBranches from './components/Admin/EditBranches';
 
 function App() {
   return (
@@ -21,7 +23,8 @@ function App() {
      <Router>
       <Routes>
         <Route path="/" element={<Login />} />
-
+        <Route path="/admin" element={<AdminBar />} />
+        <Route path="/edit" element={<EditBranches />} />
         <Route path="/signUp" element={<SignUP />} />
         <Route path="/system" element={<GetBusines />} />
         <Route path="/getsystem" element={<GetBusines />} />
