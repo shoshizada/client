@@ -50,7 +50,6 @@ import axios from 'axios';
   const createInMongo=async()=>{
       const newUser = {
         uid: String(user?.uid),
-        role: Role.admin,
         firstName: firstName,
         lastName: lastName,
         phone: phone,

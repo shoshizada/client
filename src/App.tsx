@@ -26,22 +26,17 @@ function App() {
       {/* <System></System> */}
      <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
+         <Route path="/" element={<Login />} />
+        <Route path="/signUp" element={<SignUP />} />
         <Route path="/admin" element={<AdminBar />} />
         <Route path="/edit" element={<EditBranches />} />
-        <Route path="/signUp" element={<SignUP />} />
-=
-         <Route path="/" element={<System />} />
-
-        {/* <Route path="/signUp" element={<SignUP />} />
->>>>>>> c6947ba82cd36b13735e9d88e8023630484170e2
         <Route path="/system" element={<GetBusines />} />
         <Route path="/getsystem" element={<GetBusines />} />
         <Route path="/createsystem" element={<CreateBusines />} />
         <Route path="/updatesystem" element={<UpdateBusines />} />
          <Route path="/deletesystem" element={<DeleteBusines />} />
         <Route path="/getsystembyid" element={<GetBusinessById />} />
-        <Route path="/map" element={<Map/>} /> */} 
+        <Route path="/map" element={<Map/>} /> 
                 <Route path="/hello" element={<Hello/>} /> 
 
       </Routes>

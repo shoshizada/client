@@ -109,6 +109,7 @@ import {
   where,
   addDoc,
 } from "firebase/firestore";
+import { Role } from "./components/user";
 const Config = {
     apiKey: "AIzaSyDFibynyBpIszThGHSx5uut11gF4SQV3-U",
     authDomain: "fir-a6e6e.firebaseapp.com",
@@ -177,6 +178,7 @@ const registerWithEmailAndPassword = async (name:string,email:string, password:s
       name,
       authProvider: "local",
       email,
+      role: Role[0]
     });
   } catch (err:any) {
     console.error(err);
