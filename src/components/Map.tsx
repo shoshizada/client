@@ -1,3 +1,4 @@
+
 import React, { useCallback, useMemo, useRef, useState } from "react";
 import {
   GoogleMap,
@@ -9,7 +10,7 @@ import {
   MarkerClustererProps
 } from '@react-google-maps/api'
 import Places from './Places'
-import { position } from "@chakra-ui/react";
+// import { position } from "@chakra-ui/react";
 import Distance from "./Distance";
 
 type LatLngLiteral = google.maps.LatLngLiteral;
@@ -131,3 +132,39 @@ const g= (position:LatLngLiteral)=>
 
 
 export default Map
+
+
+  const defaultOptions = {
+    strokeOpacity:0.5,
+    strokeWeight:2,
+    clickable:false,
+    draggable:false,
+    editable:false,
+    visable:false,
+  }
+
+  const closeOptions = {
+    ...defaultOptions,
+    zindex:2,
+    fillOpacity:0.05,
+    strokeColor:"#8BC34A",
+    fillColor:"#8BC34A",
+  }
+
+  const middleOptions = {
+    ...defaultOptions,
+    zindex:2,
+    fillOpacity:0.05,
+    strokeColor:"#FBC02D",
+    fillColor:"#FBC02D",
+  }
+
+  const farOptions = {
+    ...defaultOptions,
+    zindex:2,
+    fillOpacity:0.05,
+    strokeColor:"#FF5252",
+    fillColor:"#FF5252",
+  }
+
+  
