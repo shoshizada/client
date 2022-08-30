@@ -1,3 +1,4 @@
+
 export type User = {
     _id?: string,
     uid?: string,
@@ -10,4 +11,5 @@ export type User = {
       admin,
       manager,
       customer,
+
   }

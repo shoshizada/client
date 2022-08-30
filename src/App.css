@@ -94,22 +94,38 @@ p{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border: greenyellow;
 }
-h1{
-  color: orange;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-/* button{
-  color: white;
- background-color: greenyellow;
- width: 100px;
- border: none;
-  
-} */
+
 div{
   background-image: "https://www.geektime.co.il/waze-starts-shipping-beta-testers-dark-mode-for-the-entire-ui/";
 }
 .map-container{
-  width: 70%;
-  height: 70vh;
+  width: 100%;
+  height: 100vh;
 }
-
+.controls{
+width: 20%;
+padding: 1rem;
+background: #8ab1bc;
+color: aliceblue;
+border: black solid 3px;
+}
+.map{
+  width: 80%;
+  height: 100vh;
+}
+.container
+{
+  display: flex;
+  height: 100vh;
+}
+.combobox-input{
+  width: 90%;
+  padding: 0.5rem;
+}
+.combobox-option
+{
+  width: 90%;
+  padding: 0.5rem;
+  border: 3px solid black;
+  cursor: pointer;
+}

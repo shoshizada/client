@@ -33,8 +33,8 @@ const db = getFirestore(app);
 const signInWithGoogle = async () => {
   try {
       const res = await signInWithPopup(auth, googleProvider);
-      console.log(res.user.uid); 
-      const user=res.user; 
+      console.log(res.user.uid);
+      const user=res.user;
       const q = query(collection(db, "users"), where("uid", "==", user.uid));
     const docs = await getDocs(q);
     if (docs.docs.length === 0) {
@@ -113,7 +113,8 @@ export {
   sendPasswordReset,
   logout,
 };
-
 function firebaseConfig(firebaseConfig: any) {
     throw new Error("Function not implemented.");
   }
+
+
