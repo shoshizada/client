@@ -99,9 +99,12 @@ const Map = () => {
 
            
 
-          <Circle center={office} radius={15000}/>
-          <Circle center={office} radius={30000}/>
-          <Circle center={office} radius={45000}/>
+             <Circle center={office} radius={1500}
+             options={{fillColor:'green',fillOpacity:0.1,strokeColor:'green'}}/>
+          <Circle center={office} radius={3000}
+             options={{fillColor:'orange',fillOpacity:0.1,strokeColor:'orange'}}/>
+          <Circle center={office} radius={4500}
+             options={{fillColor:'red',fillOpacity:0.1,strokeColor:'red'}}/>
           </> 
 
           )}
@@ -134,37 +137,3 @@ const g= (position:LatLngLiteral)=>
 export default Map
 
 
-  const defaultOptions = {
-    strokeOpacity:0.5,
-    strokeWeight:2,
-    clickable:false,
-    draggable:false,
-    editable:false,
-    visable:false,
-  }
-
-  const closeOptions = {
-    ...defaultOptions,
-    zindex:2,
-    fillOpacity:0.05,
-    strokeColor:"#8BC34A",
-    fillColor:"#8BC34A",
-  }
-
-  const middleOptions = {
-    ...defaultOptions,
-    zindex:2,
-    fillOpacity:0.05,
-    strokeColor:"#FBC02D",
-    fillColor:"#FBC02D",
-  }
-
-  const farOptions = {
-    ...defaultOptions,
-    zindex:2,
-    fillOpacity:0.05,
-    strokeColor:"#FF5252",
-    fillColor:"#FF5252",
-  }
-
-  
