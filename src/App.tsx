@@ -23,6 +23,7 @@ import CreateLocation from './components/Location/AddLocation';
 
 function App() {
   return (
+    // <GetBusines />
      <CreateLocation />
   //   <div className="app">
   //     {/* <Map></Map> */}

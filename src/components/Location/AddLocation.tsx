@@ -15,8 +15,8 @@ export interface Location
     name: string;
     notes: string;
     communication_details: {
-        phone: string,
-        email: string
+        phone: string;
+        email: string;
     }
 }
 const CreateLocation=()=>
