@@ -26,7 +26,7 @@ function App() {
   return (
     // <GetBusines />
   
-     <DeleteLocation />
+     <Map />
   //   <div className="app">
   //     {/* <Map></Map> */}
   //     {/* <System></System> */}
