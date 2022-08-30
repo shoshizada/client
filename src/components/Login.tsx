@@ -22,7 +22,7 @@ import '../css/Login.css'
     }));
     
       // navigate(`/HomePage/${user.uid}`);
-      navigate(`/admin`);   
+      navigate(`/system`);   
     }
    }, [user, loading]);
   

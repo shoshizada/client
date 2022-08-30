@@ -129,3 +129,6 @@ border: black solid 3px;
   border: 3px solid black;
   cursor: pointer;
 }
+div{
+  background-image:"client\src\css\image (62).png" ;
+}
