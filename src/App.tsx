@@ -21,12 +21,14 @@ import Hello from './components/System/Hello';
 import { AddLocationAlt } from '@mui/icons-material';
 import CreateLocation from './components/Location/AddLocation';
 import DeleteLocation from './components/Location/DeleteLocation';
+import UpdateLocation from './components/Location/UpdateLocation';
 
 function App() {
   return (
     // <GetBusines />
-  
-     <Map />
+   
+  // < CreateLocation/>
+     <UpdateLocation/>
   //   <div className="app">
   //     {/* <Map></Map> */}
   //     {/* <System></System> */}
