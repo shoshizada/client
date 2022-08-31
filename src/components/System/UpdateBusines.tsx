@@ -11,13 +11,12 @@ const UpdateBusines = () => {
 
 
     const [newBusiness, setUpdateBusines] = useState({
-        topic: "",
-        objectName: "",
-        owner: "",
-        description: "",
-        phone: "",
-        email: "",
-        urlName:"",
+    admin_id: "",
+    name: "",
+    description: "",
+    subject: "",
+    phone: "",
+    email: "",
     })
 
 
@@ -36,19 +35,19 @@ const UpdateBusines = () => {
     const updateBusiness = () => {
         updateSystem(idUpdateBusiness, newBusiness);
     }
-
+   
     return (
         <div>
 
             <h1>Update Business</h1>
             <Stack spacing={3}>
-                <Input onChange={updateBusines} value={newBusiness.topic} name="topic" placeholder='topic' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input>
-                <Input onChange={updateBusines} value={newBusiness.objectName} name="objectName" placeholder='object name' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input>
-                <Input onChange={updateBusines} value={newBusiness.owner} name="owner" placeholder='owner' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input>
+                <Input onChange={updateBusines} defaultValue={newBusiness.admin_id} name="admin_id" placeholder='admin_id' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input>
+                <Input onChange={updateBusines} value={newBusiness.name} name="name" placeholder='name' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input>
+                <Input onChange={updateBusines} value={newBusiness.subject} name="subject" placeholder='subject' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input>
                 <Input onChange={updateBusines} value={newBusiness.description} name="description" placeholder='description' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input>
                 <Input onChange={updateBusines} value={newBusiness.phone} name="phone" placeholder='phone' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input>
                 <Input onChange={updateBusines} value={newBusiness.email} name="email" placeholder='email' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input>
-                <Input onChange={updateBusines} value={newBusiness.urlName} name="urlName" placeholder='manager urlName' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input>
+                {/* <Input onChange={updateBusines} value={newBusiness.urlName} name="urlName" placeholder='manager urlName' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input> */}
                 <InputGroup>
                     <InputLeftElement
                         pointerEvents='none'

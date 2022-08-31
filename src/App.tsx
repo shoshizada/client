@@ -34,7 +34,7 @@ function App() {
       {/* <Map></Map> */}
       {/* <System></System> */}
        {/* <CreateLocation /> */}
-       <img src="C:\Users\user1\Desktop\clients\client\src\css\image (62).png"></img>
+       <img src="client\src\css\image (62).png"></img>
      <Router>
       <Routes>
          <Route path="/" element={<Login />} />

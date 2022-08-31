@@ -16,14 +16,14 @@ import Typography from '@mui/material/Typography';
 
 
     interface System{
-        _id: string  
-        topic: string
-        objectName: string
-        owner: string
-        description: string
-        phone: string
-        email: string
-        urlName:string
+    _id: string;
+    admin_id: string;
+    name: string;
+    description: string;
+    subject: string;
+    phone: string;
+    email: string;
+
         }
     const bull = (
      <Box
@@ -59,35 +59,36 @@ const GetSystem=()=>
         const map = (event: React.MouseEvent<HTMLElement>) => {
        navigate('/map')
       };
-               
-                
+
                
     const renderList = () : JSX.Element[]=>
     {
         let i=0;
         return system.map((syste)=>{
             return(
-             <React.Fragment>
-          <CardContent>
-      <Typography sx={{ fontSize: 12 }} color="text.secondary" gutterBottom>
-      <p>topic: {syste.topic}</p>
-       <p>id: {syste._id} </p>
+              <body>
+            <Card  variant="outlined">
+            <React.Fragment>
+            <CardContent>
+            <Typography variant="h5" component="div">
+            <p className="p1 text-right">business name: {syste.subject}</p>
+          
+            be{bull}nev{bull}o{bull}lent
       </Typography>
-      <Typography variant="h5" component="div">
-              <p>objectName: {syste.objectName} </p>
-        be{bull}nev{bull}o{bull}lent
-      </Typography>
-      <Typography sx={{ mb: 1.5 }} color="text.secondary">
-         <p>business :{i++}</p>
+            <Typography sx={{ fontSize: 15 }} color="green" gutterBottom>
+            <p>descripition: {syste.description} </p>
+            <p>business id:{syste._id} </p>
+            <p>business owner name: {syste.name}</p>
+            <p>manager id: {syste.admin_id} </p>
+           </Typography>
+      
+      <Typography sx={{ mb: 1.5 }} color="green">
+      
       </Typography>
       <Typography variant="body2">
- 
-                <p>owner: {syste.owner}</p>
-                
-                <p>description: {syste.description} </p>
                 <p>phone: {syste.phone} </p>
                 <p>email: {syste.email}</p>
-                <p>urlName: {syste.urlName} </p>
+       
                  
         <br />
         {'"a benevolent smile"'}
@@ -97,8 +98,8 @@ const GetSystem=()=>
       <Button size="small"><button onClick={map}>tomap</button></Button>
       </CardActions>
        </React.Fragment>
-              
-                
+              </Card>
+                </body>
         )      
         })}
 
@@ -110,6 +111,7 @@ const GetSystem=()=>
       };
  
         return (
+          <body>
             <>
             <h1>All Businesses</h1>
          <button onClick={handleClick} >get system by id</button>
@@ -117,11 +119,11 @@ const GetSystem=()=>
            {/* <div>{renderList()}</div> */}
            <button onClick={logout}>Sign out of Firebase</button>
            
-          <Box sx={{ minWidth: 275 }}>
-           <Card variant="outlined">{renderList()}</Card>
+          <Box sx={{ minWidth: 100}}>
+         {renderList()}
           </Box>
             </>
-
+</body>
         )
     
 

@@ -90,10 +90,10 @@
   border: none
 }
 p{
-  color: palevioletred;
+  color: deeppink;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  border:palevioletred ;
-  border: palevioletred;
+  border:deeppink ;
+  border: deeppink;
   border-width: 2px;
 }
 
@@ -135,6 +135,14 @@ div{
   background-image:"client\src\css\image (62).png" ;
 }
 h1{
-  color: orange;
+  color: deeppink;
 }
-button{background-color: palevioletred;}
+button{background-color: deeppink}
+body{
+  background-color: black;
+ 
+}
+.p1{
+  color: black;
+  border-width: 0vmax;
+}

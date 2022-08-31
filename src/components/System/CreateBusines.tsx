@@ -5,14 +5,15 @@ import { createSystem, getAllSystems,deleteSystem, updateSystem } from '../../ap
 
 export interface Business
 { 
-   
-       topic: string
-        objectName: string
-        owner: string
-        description: string
-        phone: string
-        email: string
-        urlName:string
+    // id: string;
+    admin_id: string;
+    name: string;
+    description: string;
+    subject: string;
+    phone: string;
+    email: string;
+  
+
 }
 
 const CreateBusines=()=>
@@ -22,14 +23,15 @@ const CreateBusines=()=>
 
   
     const [newBusiness,setNewBusiness]=useState({
-        topic: "",
-        objectName: "",
-        owner:"",
-        description:"",
-        phone:  "",
-        email: "",
-        urlName: " ", 
-        })
+   
+    admin_id: "",
+    name: "",
+    description: "",
+    subject: "",
+    phone: "",
+    email: "",
+        
+})
  
 
 
@@ -43,6 +45,7 @@ const CreateBusines=()=>
         )
     }
     const handleSubmit=async() => { 
+        console.log(newBusiness)
          const resp = createSystem(newBusiness)
         
     }
@@ -60,13 +63,14 @@ const CreateBusines=()=>
                 <h1>Add Business</h1>
                 
                 <Stack spacing={3}>
-                    <Input onChange={addBusiness} value={newBusiness.topic} name="topic" placeholder='topic' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input>
-                    <Input onChange={addBusiness} value={newBusiness.objectName } name="objectName" placeholder='object name' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input> 
-                    <Input onChange={addBusiness} value={newBusiness.owner } name="owner" placeholder='owner' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input> 
+                    <Input onChange={addBusiness} defaultValue={newBusiness.admin_id} name="admin_id" placeholder='admin_id' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input>
+                    <Input onChange={addBusiness} value={newBusiness.name } name="name" placeholder='name' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input> 
+                    {/* <Input onChange={addBusiness} value={newBusiness.owner } name="owner" placeholder='owner' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input>  */}
+                    <Input  onChange={addBusiness}value={newBusiness.subject} name="subject" placeholder='subject' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input> 
                     <Input  onChange={addBusiness}value={newBusiness.description} name="description" placeholder='description' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input> 
                     <Input  onChange={addBusiness}value={newBusiness.phone} name="phone" placeholder='phone' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input> 
                     <Input  onChange={addBusiness}value={newBusiness.email} name="email" placeholder='email' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input> 
-                    <Input  onChange={addBusiness}value={newBusiness.urlName} name="urlName" placeholder='manager urlName' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input> 
+                    {/* <Input  onChange={addBusiness}value={newBusiness.urlName} name="urlName" placeholder='manager urlName' size='md' isInvalid errorBorderColor='red.300' _placeholder={{ opacity: 0.4, color: 'orange' }}  ></Input>  */}
                     <InputGroup>
                         <InputLeftElement
                         pointerEvents='none'
