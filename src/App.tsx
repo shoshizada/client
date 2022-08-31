@@ -6,7 +6,6 @@ import './App.css';
 import List from './components/List';
 import { ChakraProvider } from '@chakra-ui/react'
 import Login from './components/Login';
-import CreateBusines from './components/CreateBusines';
 import SignUP from './components/SingUp';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import UpdateBusines from './components/System/UpdateBusines';
@@ -22,44 +21,47 @@ import { AddLocationAlt } from '@mui/icons-material';
 import CreateLocation from './components/Location/AddLocation';
 import DeleteLocation from './components/Location/DeleteLocation';
 import UpdateLocation from './components/Location/UpdateLocation';
+import GetBusinessById from './components/System/GetBusinessById';
+import CreateBusines from './components/System/CreateBusines';
 
 function App() {
   return (
-    // <GetBusines />
+  //   // <GetBusines />
    
-  // < CreateLocation/>
-     <UpdateLocation/>
-  //   <div className="app">
-  //     {/* <Map></Map> */}
-  //     {/* <System></System> */}
-  //      <CreateLocation />
-  //    <Router>
-  //     <Routes>
-  //        <Route path="/" element={<Login />} />
-  //       <Route path="/signUp" element={<SignUP />} />
-  //       <Route path="/admin" element={<AdminBar />} />
-  //       <Route path="/edit" element={<EditBranches />} />
+  // // < CreateLocation/>
+  //    <UpdateLocation/>
+    <div className="app">
+      {/* <Map></Map> */}
+      {/* <System></System> */}
+       {/* <CreateLocation /> */}
+       <img src="C:\Users\user1\Desktop\clients\client\src\css\image (62).png"></img>
+     <Router>
+      <Routes>
+         <Route path="/" element={<Login />} />
+        <Route path="/signUp" element={<SignUP />} />
+        <Route path="/admin" element={<AdminBar />} />
+        <Route path="/edit" element={<EditBranches />} />
 
-  //       <Route path="/signUp" element={<SignUP />} />
+        <Route path="/signUp" element={<SignUP />} />
 
-  //        <Route path="/" element={<System />} />
+         <Route path="/" element={<System />} />
 
-  //       <Route path="/signUp" element={<SignUP />} />
-  //       <Route path="/system" element={<GetBusines />} />
-  //       <Route path="/getsystem" element={<GetBusines />} />
-  //       <Route path="/createsystem" element={<CreateBusines />} />
-  //       <Route path="/updatesystem" element={<UpdateBusines />} />
-  //        <Route path="/deletesystem" element={<DeleteBusines />} />
-  //       {/* <Route path="/createlocation" element={<CreateLocation />} /> */}
+        <Route path="/signUp" element={<SignUP />} />
+        <Route path="/system" element={<GetBusines />} />
+        <Route path="/getsystem" element={<GetBusines />} />
+        <Route path="/createsystem" element={<CreateBusines />} />
+        <Route path="/updatesystem" element={<UpdateBusines />} />
+         <Route path="/deletesystem" element={<DeleteBusines />} />
+        {/* <Route path="/createlocation" element={<CreateLocation />} /> */}
 
-  //       {/* <Route path="/getsystembyid" element={<GetBusinessById />} /> */}
-  //       <Route path="/map" element={<Map/>} /> 
-  //               <Route path="/hello" element={<Hello/>} /> 
+        <Route path="/getsystembyid" element={<GetBusinessById />} />
+        <Route path="/map" element={<Map/>} /> 
+                <Route path="/hello" element={<Hello/>} /> 
 
-  //     </Routes>
+      </Routes>
       
-  //   </Router> 
-  // </div>
+    </Router> 
+  </div>
 
   );
 }

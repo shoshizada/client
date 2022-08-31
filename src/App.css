@@ -90,9 +90,11 @@
   border: none
 }
 p{
-  color: greenyellow;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  border: greenyellow;
+  color: palevioletred;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border:palevioletred ;
+  border: palevioletred;
+  border-width: 2px;
 }
 
 div{
@@ -132,3 +134,7 @@ border: black solid 3px;
 div{
   background-image:"client\src\css\image (62).png" ;
 }
+h1{
+  color: orange;
+}
+button{background-color: palevioletred;}
