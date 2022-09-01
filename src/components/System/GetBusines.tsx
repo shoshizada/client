@@ -13,6 +13,13 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import { Navigate } from "react-router-dom";
+// import Row from 'row';
+// // import Col from 'col';
 
 
     interface System{
@@ -51,56 +58,60 @@ const GetSystem=()=>
           navigate('/');   
         }
        }, [user, loading]);
+
     const getAllSystem = async () => {
          const res =getAllSystems();
         console.log(res);
         setSystem(await res);
     }
-        const map = (event: React.MouseEvent<HTMLElement>) => {
+
+    const map = (event: React.MouseEvent<HTMLElement>) => {
        navigate('/map')
       };
 
-               
     const renderList = () : JSX.Element[]=>
     {
         let i=0;
         return system.map((syste)=>{
             return(
-              <body>
-            <Card  variant="outlined">
+             <body>
+             {/* <Row>
+
+  // <Col xs={6} sm={6} md={2} lg={1}> */}
+
+            <Card variant="outlined" >
             <React.Fragment>
             <CardContent>
             <Typography variant="h5" component="div">
             <p className="p1 text-right">business name: {syste.subject}</p>
           
             be{bull}nev{bull}o{bull}lent
-      </Typography>
+            </Typography>
             <Typography sx={{ fontSize: 15 }} color="green" gutterBottom>
             <p>descripition: {syste.description} </p>
             <p>business id:{syste._id} </p>
             <p>business owner name: {syste.name}</p>
             <p>manager id: {syste.admin_id} </p>
            </Typography>
-      
-      <Typography sx={{ mb: 1.5 }} color="green">
-      
-      </Typography>
-      <Typography variant="body2">
+           <Typography sx={{ mb: 1.5 }} color="green">
+           </Typography>
+            <Typography variant="body2">
                 <p>phone: {syste.phone} </p>
                 <p>email: {syste.email}</p>
        
-                 
-        <br />
+            <br />
         {'"a benevolent smile"'}
-      </Typography>
-       </CardContent>
+         </Typography>
+         </CardContent>
         <CardActions>
-      <Button size="small"><button onClick={map}>tomap</button></Button>
-      </CardActions>
-       </React.Fragment>
-              </Card>
+        <Button size="small"><button onClick={map}>tomap</button></Button>
+        </CardActions>
+         </React.Fragment>
+              </Card>   
+              {/* </Col>
+              </Row> */}
                 </body>
-        )      
+                )      
         })}
 
       const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -109,17 +120,44 @@ const GetSystem=()=>
        const handleClick1 = (event: React.MouseEvent<HTMLElement>) => {
        navigate("/createsystem")
       };
- 
+
+      const handleClick2 = (event: React.MouseEvent<HTMLElement>) => {
+       navigate("/admin")
+      };
+
         return (
           <body>
+              <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2 }}
+            
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            All Businesses
+          </Typography>
+          <Button color="inherit" onClick={handleClick}>get business by id</Button>|
+          <Button color="inherit" onClick={handleClick1}>add business </Button>|
+          <Button color="inherit" onClick={handleClick2}>to admin</Button>|
+          <Button color="inherit" onClick={logout}>Log out</Button>|
+        </Toolbar>
+      </AppBar>
+    </Box>
             <>
-            <h1>All Businesses</h1>
-         <button onClick={handleClick} >get system by id</button>
+            {/* <h1>All Businesses</h1> */}
+         {/* <button onClick={handleClick} >get system by id</button>
           <button onClick={handleClick1} >add business</button>
-           {/* <div>{renderList()}</div> */}
-           <button onClick={logout}>Sign out of Firebase</button>
-           
-          <Box sx={{ minWidth: 100}}>
+           <button onClick={handleClick2} >to admin</button>
+           <button onClick={logout}>Sign out of Firebase</button> */}
+     
+          <Box sx={{ height:'100%',width:'100%',alignItems:'right',justifyContent:{xs:'6',md:'start'}}}>
          {renderList()}
           </Box>
             </>
@@ -129,3 +167,4 @@ const GetSystem=()=>
 
 }
 export default GetSystem;
+// display:'flex'

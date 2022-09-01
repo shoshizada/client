@@ -34,7 +34,7 @@ function App() {
       {/* <Map></Map> */}
       {/* <System></System> */}
        {/* <CreateLocation /> */}
-       <img src="client\src\css\image (62).png"></img>
+       <img src="././components/System/image (64).png"/>
      <Router>
       <Routes>
          <Route path="/" element={<Login />} />
@@ -52,7 +52,9 @@ function App() {
         <Route path="/createsystem" element={<CreateBusines />} />
         <Route path="/updatesystem" element={<UpdateBusines />} />
          <Route path="/deletesystem" element={<DeleteBusines />} />
-        {/* <Route path="/createlocation" element={<CreateLocation />} /> */}
+        <Route path="/createlocation" element={<CreateLocation />} />
+        <Route path="/updatelocation" element={<UpdateLocation />} />
+        <Route path="/deletelocation" element={<DeleteLocation />} />
 
         <Route path="/getsystembyid" element={<GetBusinessById />} />
         <Route path="/map" element={<Map/>} /> 

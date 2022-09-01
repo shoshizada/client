@@ -90,10 +90,11 @@
   border: none
 }
 p{
-  color: deeppink;
+  direction: rtl;
+  color: blue;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  border:deeppink ;
-  border: deeppink;
+  border:blue ;
+  border: blue;
   border-width: 2px;
 }
 
@@ -135,14 +136,16 @@ div{
   background-image:"client\src\css\image (62).png" ;
 }
 h1{
-  color: deeppink;
+  direction: rtl;
+  color: blue;
 }
-button{background-color: deeppink}
+button{background-color: blue}
 body{
   background-color: black;
  
 }
 .p1{
-  color: black;
+  direction: rtl;
+  color: blue;
   border-width: 0vmax;
 }
