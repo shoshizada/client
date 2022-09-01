@@ -91,10 +91,10 @@
 }
 p{
   direction: rtl;
-  color: blue;
+  color: #1976d2;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  border:blue ;
-  border: blue;
+  border:#1976d2 ;
+  border: #1976d2;
   border-width: 2px;
 }
 
@@ -137,15 +137,15 @@ div{
 }
 h1{
   direction: rtl;
-  color: blue;
+  color: #1976d2;
 }
-button{background-color: blue}
+button{background-color: #1976d2}
 body{
   background-color: black;
  
 }
 .p1{
   direction: rtl;
-  color: blue;
+  color: #1976d2;
   border-width: 0vmax;
 }
