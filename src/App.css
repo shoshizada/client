@@ -90,9 +90,11 @@
   border: none
 }
 p{
-  color: greenyellow;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  border: greenyellow;
+  color: deeppink;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border:deeppink ;
+  border: deeppink;
+  border-width: 2px;
 }
 
 div{
@@ -131,4 +133,16 @@ border: black solid 3px;
 }
 div{
   background-image:"client\src\css\image (62).png" ;
+}
+h1{
+  color: deeppink;
+}
+button{background-color: deeppink}
+body{
+  background-color: black;
+ 
+}
+.p1{
+  color: black;
+  border-width: 0vmax;
 }
