@@ -90,10 +90,11 @@
   border: none
 }
 p{
-  color: deeppink;
+  direction: rtl;
+  color: #1976d2;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  border:deeppink ;
-  border: deeppink;
+  border:#1976d2 ;
+  border: #1976d2;
   border-width: 2px;
 }
 
@@ -135,14 +136,16 @@ div{
   background-image:"client\src\css\image (62).png" ;
 }
 h1{
-  color: deeppink;
+  direction: rtl;
+  color: #1976d2;
 }
-button{background-color: deeppink}
+button{background-color: #1976d2}
 body{
   background-color: black;
  
 }
 .p1{
-  color: black;
+  direction: rtl;
+  color: #1976d2;
   border-width: 0vmax;
 }

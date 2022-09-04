@@ -11,8 +11,20 @@ import { Navigate } from "react-router-dom";
 
 export default function AdminBar() {
     const navigate = useNavigate();
+
+    const addlocation = (event: React.MouseEvent<HTMLElement>) => {
+       navigate('/createlocation')
+      };
+
+    const updatelocation = (event: React.MouseEvent<HTMLElement>) => {
+       navigate('/updatelocation')
+      };
+
+    const deletelocation = (event: React.MouseEvent<HTMLElement>) => {
+       navigate('/deletelocation')
+      };
   return (
-    <Box sx={{ flexGrow: 1 }}>
+         <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
           <IconButton
@@ -22,12 +34,15 @@ export default function AdminBar() {
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            <MenuIcon />
+          <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Admin
           </Typography>
           <Button color="inherit" onClick={() => navigate(`/edit`)}>Edit branches </Button>
+          <Button color="inherit" onClick={addlocation}>addlocation </Button>|
+          <Button color="inherit" onClick={updatelocation}>updatelocation </Button>|
+          <Button color="inherit" onClick={deletelocation}>deletelocation </Button>|
         </Toolbar>
       </AppBar>
     </Box>

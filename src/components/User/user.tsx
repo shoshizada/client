@@ -1,7 +1,6 @@
 
-export type User = {
-    _id?: string,
-    uid?: string,
+export interface User  {
+    firebase_uid: string;
     firstName: string;
     lastName: string;
     phone: string;
