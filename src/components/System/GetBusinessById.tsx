@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 import { getAllSystems, getSystemByManagerId } from '../../api/system';
+import { observer } from 'mobx-react';
     interface System{
     _id: string;
     admin_id: string;
@@ -50,4 +51,4 @@ const GetSystemById=()=>
             </>
         )
 }
-export default GetSystemById;
+export default observer(GetSystemById) ;

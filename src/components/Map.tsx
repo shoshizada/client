@@ -125,9 +125,6 @@ const Map = () => {
 ;
 
 
-
-
-
 const g=  ()=>
 {
   let data;

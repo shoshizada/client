@@ -25,6 +25,8 @@
     "firebase": "^9.9.3",
     "framer-motion": "^7.0.0",
     "grid": "^4.10.8",
+    "mobx": "^6.6.1",
+    "mobx-react": "^7.5.2",
     "mongoose": "^6.5.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

@@ -18,8 +18,9 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Navigate } from "react-router-dom";
+import { observer } from 'mobx-react';
 
-  interface System{
+    interface System{
     _id: string;
     admin_id: string;
     name: string;
@@ -91,15 +92,16 @@ const GetSystem=()=>
             <Typography variant="body2">
                 <p>phone: {syste.phone} </p>
                 <p>email: {syste.email}</p>
-                 <br />
-           {'"a benevolent smile"'}
-               </Typography>
-               </CardContent>
-              <CardActions>
-              <Button size="small"><button onClick={map}>tomap</button></Button>
-              </CardActions>
-               </React.Fragment>
-            </Card>   
+       
+            <br />
+        {'"a benevolent smile"'}
+         </Typography>
+         </CardContent>
+        <CardActions>
+        <Button size="small"><button onClick={map}>tomap</button></Button>
+        </CardActions>
+         </React.Fragment>
+              </Card>   
                 </body>
                 )      
         })}
@@ -141,11 +143,6 @@ const GetSystem=()=>
       </AppBar>
     </Box>
             <>
-            {/* <h1>All Businesses</h1> */}
-         {/* <button onClick={handleClick} >get system by id</button>
-          <button onClick={handleClick1} >add business</button>
-           <button onClick={handleClick2} >to admin</button>
-           <button onClick={logout}>Sign out of Firebase</button> */}
      
           <Box sx={{ height:'100%',width:'100%',alignItems:'right',justifyContent:{xs:'6',md:'start'}}}>
          {renderList()}
@@ -156,5 +153,4 @@ const GetSystem=()=>
     
 
 }
-export default GetSystem;
-// display:'flex'
+export default observer(GetSystem) ;
