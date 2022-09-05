@@ -1,5 +1,5 @@
 
-import React, { useCallback, useMemo, useRef, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   GoogleMap,
   Marker,
@@ -10,21 +10,28 @@ import {
   MarkerClustererProps
 } from '@react-google-maps/api'
 import Places from './Places'
-// import { position } from "@chakra-ui/react";
+import axios from 'axios';
 import Distance from "./Distance";
 
 type LatLngLiteral = google.maps.LatLngLiteral;
 type DirectionsResult = google.maps.DirectionsResult;
-type MapOptions = google.maps.MapOptions;
 
 
 const Map = () => {
   const [office,setOffice]=useState<LatLngLiteral|any>()
   const [directions,setDirections]=useState<DirectionsResult|any>();
   const mapRef = useRef<GoogleMap>();
-  const center = useMemo<LatLngLiteral>(() => ({ lat: 43, lng: -88 }), []);
+  const center = useMemo<LatLngLiteral>(() => ({ lat: 32, lng: 35 }), []);
   const onLoad=useCallback((map:any)=>(mapRef.current=map),[]);
-  const house=useMemo(()=>g(center),[center])
+ 
+
+  const house=useMemo(()=>g(),[center])  
+  console.log(house.map(element => element.lat));
+    
+  
+  
+
+  
 
   const fetchDirections=(house:LatLngLiteral)=>
   {
@@ -65,11 +72,12 @@ const Map = () => {
           mapRef.current?.panTo(position)
         }}/> 
 
-        {!office && <p>fffff</p>}
+        {!office && <p></p>}
         {/* {!directions && <Distance leg={directions.routes[0].legs[0]}/>} */}
       </div>
       <div className="map">
-        <GoogleMap zoom={10} center={center} mapContainerClassName={"map-container"}onLoad={onLoad} >
+ 
+        <GoogleMap zoom={10} center={{ lat: 32, lng: 35 }} mapContainerClassName={"map-container"}onLoad={onLoad} >
           {/* <Marker position={office}></Marker> */}
           
         {directions && <DirectionsRenderer directions={directions} options={{ polylineOptions:{
@@ -81,12 +89,11 @@ const Map = () => {
           {office &&(
              <>
              <Marker position={office} /> 
-
              <MarkerClusterer>
-              {(clusterer:any|MarkerClustererProps | Readonly<MarkerClustererProps>): any=>
-               house.map((h) => (
+              {(clusterer:any|MarkerClusterer | Readonly<MarkerClusterer>): any=>
+               house.map((h:LatLngLiteral) => (
               <Marker
-               key={h.lat}
+                key={h.lat}
                 position={h}
                 clusterer={clusterer}
                 onClick={()=>{
@@ -115,25 +122,29 @@ const Map = () => {
     </div>
   )
 }
-
 ;
 
-const g= (position:LatLngLiteral)=>
-{
-  const h: Array<LatLngLiteral>=[];
 
-  for(let i=0;i<100;i++)
-  {
-    const d=Math.random() < 0.5 ?-2 : 2;
-    h.push({
-      lat:position.lat+Math.random()/d,
-      lng:position.lng+Math.random()/d,
-    });
+
+
+
+const g=  ()=>
+{
+  let data;
+  const h: Array<LatLngLiteral>=[];
+  try {
+        axios.get('http://localhost:3333/location').then((res)=>{data=res
+       res.data.forEach((l: { location_geolocation: { lat: any; lng: any; }; })=>{h.push({
+       lat:Number(l.location_geolocation.lat),
+       lng:Number(l.location_geolocation.lng)
+    })})
+  });
+  console.log(h)
+  } catch (error) {
+    console.log(error);
   }
   return h;
 }
+export default Map;
 
-
-export default Map
-
-
+ 

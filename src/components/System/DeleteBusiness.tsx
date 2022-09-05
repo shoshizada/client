@@ -14,8 +14,8 @@ const DeleteBusines = () => {
 
     return (
         <div>
-
-            <Input onChange={(e) => setIdDelBusiness(e.target.value)} type='string' placeholder='ID OF BUSINESS TO DELETE'></Input>
+            <input role="contentinfo"></input>
+            <Input  onChange={(e) => setIdDelBusiness(e.target.value)} type='string' placeholder='ID OF BUSINESS TO DELETE'></Input>
             <Button colorScheme='red' onClick={deleteBusiness}>DELETE</Button>
         </div>
     )

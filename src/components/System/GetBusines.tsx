@@ -18,11 +18,8 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Navigate } from "react-router-dom";
-// import Row from 'row';
-// // import Col from 'col';
 
-
-    interface System{
+  interface System{
     _id: string;
     admin_id: string;
     name: string;
@@ -32,6 +29,7 @@ import { Navigate } from "react-router-dom";
     email: string;
 
         }
+
     const bull = (
      <Box
     component="span"
@@ -75,16 +73,11 @@ const GetSystem=()=>
         return system.map((syste)=>{
             return(
              <body>
-             {/* <Row>
-
-  // <Col xs={6} sm={6} md={2} lg={1}> */}
-
             <Card variant="outlined" >
             <React.Fragment>
             <CardContent>
             <Typography variant="h5" component="div">
             <p className="p1 text-right">business name: {syste.subject}</p>
-          
             be{bull}nev{bull}o{bull}lent
             </Typography>
             <Typography sx={{ fontSize: 15 }} color="green" gutterBottom>
@@ -92,24 +85,21 @@ const GetSystem=()=>
             <p>business id:{syste._id} </p>
             <p>business owner name: {syste.name}</p>
             <p>manager id: {syste.admin_id} </p>
-           </Typography>
-           <Typography sx={{ mb: 1.5 }} color="green">
-           </Typography>
+            </Typography>
+            <Typography sx={{ mb: 1.5 }} color="green">
+             </Typography>
             <Typography variant="body2">
                 <p>phone: {syste.phone} </p>
                 <p>email: {syste.email}</p>
-       
-            <br />
-        {'"a benevolent smile"'}
-         </Typography>
-         </CardContent>
-        <CardActions>
-        <Button size="small"><button onClick={map}>tomap</button></Button>
-        </CardActions>
-         </React.Fragment>
-              </Card>   
-              {/* </Col>
-              </Row> */}
+                 <br />
+           {'"a benevolent smile"'}
+               </Typography>
+               </CardContent>
+              <CardActions>
+              <Button size="small"><button onClick={map}>tomap</button></Button>
+              </CardActions>
+               </React.Fragment>
+            </Card>   
                 </body>
                 )      
         })}
