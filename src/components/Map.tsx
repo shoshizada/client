@@ -12,6 +12,10 @@ import {
 import Places from './Places'
 import axios from 'axios';
 import Distance from "./Distance";
+import { AppBar, Box, Button, IconButton, Typography } from "@mui/material";
+import { MenuIcon } from "@chakra-ui/react";
+import AdminBar from "./Admin/AdminBar";
+
 
 type LatLngLiteral = google.maps.LatLngLiteral;
 type DirectionsResult = google.maps.DirectionsResult;
@@ -66,6 +70,7 @@ const Map = () => {
 
     <div className="container">
       <div className="controls">
+       {/* <AdminBar/> */}
         <h1>Commute?</h1>
         <Places setOffice={(position)=>{
           setOffice(position);
@@ -88,7 +93,9 @@ const Map = () => {
 
           {office &&(
              <>
+             debugger;
              <Marker position={office} /> 
+             debugger;
              <MarkerClusterer>
               {(clusterer:any|MarkerClusterer | Readonly<MarkerClusterer>): any=>
                house.map((h:LatLngLiteral) => (
@@ -121,9 +128,7 @@ const Map = () => {
       </div>
     </div>
   )
-}
-;
-
+};
 
 const g=  ()=>
 {

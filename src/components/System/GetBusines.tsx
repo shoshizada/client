@@ -67,6 +67,15 @@ const GetSystem=()=>
     const map = (event: React.MouseEvent<HTMLElement>) => {
        navigate('/map')
       };
+    
+      const request = (event: React.MouseEvent<HTMLElement>) => {
+       navigate('/createreqest')
+      };
+
+      const requestbyid = (event: React.MouseEvent<HTMLElement>) => {
+       navigate('/getreqestbyid')
+      };
+      
 
     const renderList = () : JSX.Element[]=>
     {
@@ -99,12 +108,16 @@ const GetSystem=()=>
          </CardContent>
         <CardActions>
         <Button size="small"><button onClick={map}>tomap</button></Button>
+        <Button size="small"><button onClick={request}>request</button></Button>
+     
         </CardActions>
          </React.Fragment>
               </Card>   
                 </body>
                 )      
         })}
+      
+    
 
       const handleClick = (event: React.MouseEvent<HTMLElement>) => {
        navigate('/getsystembyid')

@@ -21,6 +21,8 @@ import DeleteLocation from './components/Location/DeleteLocation';
 import UpdateLocation from './components/Location/UpdateLocation';
 import GetBusinessById from './components/System/GetBusinessById';
 import CreateBusines from './components/System/CreateBusines';
+import CreateReqest from './components/Reqest/CreateReqest';
+import GetRequestById from './components/Reqest/GetRequestById';
 export default function App() {
   return (
   //   // <GetBusines />
@@ -49,6 +51,8 @@ export default function App() {
         <Route path="/updatelocation" element={<UpdateLocation />} />
         <Route path="/deletelocation" element={<DeleteLocation />} />
         <Route path="/getsystembyid" element={<GetBusinessById />} />
+         <Route path="/createreqest" element={<CreateReqest />} />
+        <Route path="/getreqestbyid" element={<GetRequestById />}/>
         <Route path="/map" element={<Map/>} />
                 <Route path="/hello" element={<Hello/>} />
       </Routes>

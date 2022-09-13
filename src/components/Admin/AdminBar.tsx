@@ -23,6 +23,10 @@ export default function AdminBar() {
     const deletelocation = (event: React.MouseEvent<HTMLElement>) => {
        navigate('/deletelocation')
       };
+
+    const requestbyid = (event: React.MouseEvent<HTMLElement>) => {
+       navigate('/getreqestbyid')
+      };
   return (
          <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -43,6 +47,8 @@ export default function AdminBar() {
           <Button color="inherit" onClick={addlocation}>addlocation </Button>|
           <Button color="inherit" onClick={updatelocation}>updatelocation </Button>|
           <Button color="inherit" onClick={deletelocation}>deletelocation </Button>|
+          <Button color="inherit" onClick={requestbyid}>getrequestbyid </Button>|
+          
         </Toolbar>
       </AppBar>
     </Box>
