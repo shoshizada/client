@@ -7,7 +7,7 @@ import { auth, registerWithEmailAndPassword,signInWithGoogle } from "../firebase
 // import { createUser} from '../api/user';
 import "../css/Register.css";
 import axios from 'axios';
-import { createUser } from '../api/user';
+import userStore, { createUser } from '../api/user';
 import { observer } from 'mobx-react';
  function SignUpPage() {
     const navigate = useNavigate();
@@ -59,7 +59,9 @@ import { observer } from 'mobx-react';
         email: email
             }
             try{
-      await createUser(newUser);
+              // userStore.user= newUser
+              // console.log(userStore.user)
+  const resp =    await userStore.createUser(newUser);
             }catch{
 console.log("create failed");
             }

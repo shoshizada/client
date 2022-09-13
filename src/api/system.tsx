@@ -1,5 +1,7 @@
 import axios from 'axios';
 import { makeAutoObservable } from 'mobx';
+import { sys } from 'typescript';
+import System from '../components/System';
 import { Business } from '../components/System/CreateBusines'
 //getAllSystems
 export const getAllSystems = async () => {
@@ -24,7 +26,8 @@ export const getSystemByManagerId = async (managerId: string) => {
 //post
 export const createSystem = async (system: Business) => {
     try {
-        await axios.post('http://localhost:3333/system/', system);
+    const res=    await axios.post('http://localhost:3333/system/', system);
+    return res
 
     }
     catch (error) {
@@ -52,9 +55,9 @@ export const deleteSystem = async (systemId: string) => {
     }
 }
 //mobx
-class System {
-    systems: System[] = [];
-    system: any = null
+class Store {
+    systems: Business[] = [];
+    system: Business | any = null
 
     constructor() {
         makeAutoObservable(this);
@@ -67,7 +70,10 @@ class System {
         this.systems = await getSystemByManagerId(managerId);
     }
     async createSystem(system: Business) {
-        this.system = await createSystem(system);
+ 
+        const res = await createSystem(system);
+        return res;
+
     }
     async updateSystem(systemId: string, updates: Business) {
         this.system = await updateSystem(systemId, updates);
@@ -76,6 +82,6 @@ class System {
         this.system = await deleteSystem(systemId);
     }
 }
-const system = new System();
+const system = new Store();
 export default system;
 
